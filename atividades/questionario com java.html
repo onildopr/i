@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questionario</title>
+    <link rel="stylesheet" href="../stilos/style.css">
+  <style>
+    .error {
+      border: 2px solid red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Questionário</h1>
+  
+  <form id="questionForm" onsubmit="return validateForm()">
+    <div>
+      <label for="q1">Em que ano o Brasil foi descoberto?</label>
+      <input type="number" id="q1" name="q1" required>
+    </div>
+    
+    <div>
+      <label for="q2">Quem descobriu o Brasil?</label>
+      <input type="text" id="q2" name="q2" required>
+    </div>
+    
+    <div>
+      <label for="q3">Em que ano o Brasil teve sua independencia declarada?</label>
+      <input type="number" id="q3" name="q3" required>
+    </div>
+    
+    <input type="submit" value="Enviar">
+  </form>
+  
+  <script>
+    function validateForm() {
+        var q1 = document.getElementById("q1").value;
+        var q2 = document.getElementById("q2").value;
+        var q3 = document.getElementById("q3").value;
+        var form = document.getElementById("questionForm");
+        let resposta1 = '1500'
+        let resposta2 = 'pedro alvares cabral'
+        let resposta3 = '1822'
+    
+      // Verifica se todas as respostas estão corretas
+        if (q1 === resposta1 && q2 === resposta2 && q3 === resposta3) {
+            return true; // Submete a página
+        } else {
+        // Aplica a classe "error" nos campos incorretos
+        if (q1 !== resposta1) {
+          document.getElementById("q1").classList.add("error");
+        }
+        if (q2 !== resposta2) {
+          document.getElementById("q2").classList.add("error");
+        }
+        if (q3 !== resposta3) {
+          document.getElementById("q3").classList.add("error");
+        }
+        
+        return false; // Impede a submissão da página
+      }
+    }
+    
+  </script>
+  <h3><a href="../index.html">Pagina inicial</a></h3>
+</body>
+</html>

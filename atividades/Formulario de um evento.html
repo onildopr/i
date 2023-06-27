@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento</title>
+    <link rel="stylesheet" href="..//stilos/style.css">
+    <style>
+    
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Formulario de inscriçao</h2>
+    <form action="">
+        <fieldset style="width: 550px;">
+            <fieldset style="width: 500px;">
+                <label for="">Nome completo:<input type="text" required></label><br><br>
+                <label for="">E-mail: <input type="text" required></label><br>
+                <label for="sexo">Sexo:</label>
+                <input type="radio" value="masculino" name="sexo">Masculino
+                <input type="radio" value="feminino" name="sexo">Feminino <br><br>
+                <label for="Cargo">Cargo: <input type="text" required></label><br><br>
+                <label for="idade">Idade: <input type="date"></label><br><br>
+                <label for="telefone">Telefone: <input type="tel"></label>
+
+
+
+            </fieldset>
+        
+        <h3>Informaçoes da empresa</h3>
+        <p>Preencha os campos com os dados da sua empresa</p>
+            <fieldset style="width: 500px;">
+                <label for="empresa">Empresa: <input type="text"></label><br><br>
+                <label for="endereço">Endereço: <input type="text"></label><br><br>
+                <label for="cidade">cidade: <input type="text"></label><br><br>
+                <label for="estado">Estado:</label>
+                <select name="estado" id="estado">
+                    <option value="" selected>Selecione ...</option>
+                    <option value="">Amazonas</option>
+                    <option value="">Rondonia</option>
+                    <option value="">Roraima</option>
+                    <option value="">Acre</option>
+                    <option value="">Para</option>
+                    <option value="">Tocantins</option>
+                    
+                </select><br><br>
+                <label for="">quantidade de funcionarios: <input type="number" ></label><br>
+                <label for="">Observações:</label><br><br>
+                <textarea name="Observações" id="obs" cols="60" rows="10"></textarea>
+
+
+
+            </fieldset><br><br>
+            <label for="">Recibo: <input type="checkbox">Emitir em nome da instituição</label><br><br>
+            <input type="submit" value="Enviar Formulario">
+            <input type="reset" value="Fazer de novo">
+        </fieldset>
+    </form>
+    <h2 ><a href="../index.html">pagina inicial</a></h2>
+</body>
+</html>

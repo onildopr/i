@@ -1,0 +1,39 @@
+html,body{
+    background-color: rgb(200, 214, 214);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+#in{text-align: center;}
+#logo{grid-area:logo ;}
+#nav{grid-area:nav ; text-align: center;
+}
+#header{grid-area:header ; text-align: center;}
+#sidebar{grid-area:sidebar ; text-align: center;}
+#body{grid-area:body ; text-align: center;}
+#foot{grid-area:foot ; text-align: center;}
+#princ{display: grid;
+    grid-template-areas:
+    'logo logo logo logo logo logo logo logo logo '
+    'logo logo logo logo logo logo logo logo logo '
+    'nav nav nav nav nav nav nav nav nav '
+    'header header header header header header header header header '
+    'header header header header header header header header header '
+    'header header header header header header header header header '
+    'header header header header header header header header header '
+    'sidebar sidebar sidebar body body body body body body '
+    'sidebar sidebar sidebar body body body body body body '
+    'sidebar sidebar sidebar body body body body body body '
+    'sidebar sidebar sidebar body body body body body body '
+    'sidebar sidebar sidebar body body body body body body '
+    'sidebar sidebar sidebar body body body body body body '
+    'sidebar sidebar sidebar body body body body body body '
+    'sidebar sidebar sidebar body body body body body body '
+    'foot foot foot foot foot foot foot foot foot '
+    ;
+    grid-gap: 2px;
+    background-color: rgb(200, 214, 214);
+    padding: 0.8em;
+    min-width: 100%;
+    min-height: 100%
+}

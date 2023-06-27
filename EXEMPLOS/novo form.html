@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Aula Formulário</title>
+	</head>
+	<body>
+		<form id="form">
+			<input type="text" name="nome" placeholder="Digite seu nome" size="50"><br><br>
+			<input type="password" placeholder="Senha aqui..." name="senha">
+			<input type="text" placeholder="(99)99999-9999" pattern="\(\d{2}\)\d{4}-\d{4}" />
+			<br><br>
+			<label>Aperitivo? <input type="checkbox" checked></label>
+			<fieldset>
+				<legend>Sexo:</legend>
+				<label for="masc">Masculino:</label><input type="radio" name="sexo" value="M" id="masc">
+				<label for="fem">Feminino:</label><input type="radio" name="sexo" value="F" id="fem" checked>
+			</fieldset>
+			<br>
+			<label>Escreva uma mensagem:<br>
+			<textarea name="mensagem" rows="10" cols="80">O que estiver aqui aparece dentro do campo</textarea></label>
+			<fieldset>
+				<legend>Estado:</legend>
+				<select name="estado">
+					<option value="" selected disabled>Selecione</option>
+					<option value="AC">Acre</option>
+					<option value="AL">Alagoas</option>
+					<option value="AM">Amazonas</option>
+					<option value="BA" selected>Bahia</option>
+				</select>
+			
+			</fieldset>
+			<fieldset>
+				<input type="submit" value="enviar" id="btenviar">
+				<input type="reset" value="Limpar">
+			</fieldset>
+			<br>
+			<input type="number" min="0" max=100 step="2">
+		</form>
+		<script>
+			form.onsubmit = function(){
+				
+				nome = document.getElementsByName('nome')[0];
+				if (nome.value.lenght < 5){
+					return true
+				}
+				;
+				senha = document.getElementsByName(	'senha')[0];
+
+				return true;
+			
+			}
+			function verSexo{
+				let marcado = false;
+				sexo.array.forEach(s => {
+					if(s.checked == true){
+						marcado = true;
+					};
+				});
+				if (marcado == false){
+					return false;
+				};
+			}
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
