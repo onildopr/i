@@ -37,3 +37,17 @@ html,body{
     min-width: 100%;
     min-height: 100%
 }
+@media (max-width: 768px) {
+    #princ {
+        grid-template-areas:
+            'logo logo logo logo logo logo'
+            'nav nav nav nav nav nav'
+            'header header header header header header'
+            'sidebar sidebar body body body body'
+            'sidebar sidebar body body body body'
+            'sidebar sidebar body body body body'
+            'sidebar sidebar body body body body'
+            'sidebar sidebar body body body body'
+            'foot'
+    }
+}

@@ -3,6 +3,39 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>Aula Formulário</title>
+		<link rel="stylesheet" href="../stilos/style.css">
+		<style>
+			#form {
+				max-width: 500px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+
+			input[type="text"],
+			input[type="password"],
+			textarea {
+				width: 100%;
+				padding: 10px;
+				box-sizing: border-box;
+				margin-bottom: 10px;
+			}
+
+			select {
+				width: 100%;
+				padding: 10px;
+				box-sizing: border-box;
+				margin-bottom: 10px;
+			}
+
+			input[type="submit"],
+			input[type="reset"] {
+				display: block;
+				width: 100%;
+				padding: 10px;
+				box-sizing: border-box;
+				margin-top: 10px;
+			}
+		</style>
 	</head>
 	<body>
 		<form id="form">
@@ -37,6 +70,7 @@
 			<br>
 			<input type="number" min="0" max=100 step="2">
 		</form>
+		<h3><a href="../index.html">Pagina inicial</a></h3>
 		<script>
 			form.onsubmit = function(){
 				
